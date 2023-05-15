@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define DELIM " \n\t\r"
+
 /* Structs */
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -38,6 +40,7 @@ typedef struct instruction_s
 /* Function Prototypes */
 void push(stack_t **stack, int value);
 void pall(stack_t **stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
 
 /*Helper Funtion Prototypes*/
 int parse_line(char *line, unsigned int line_number, stack_t **stack);
