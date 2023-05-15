@@ -6,7 +6,7 @@
  * @stack: A pointer to the top of the stack.
  *
  * Return: 0 if the line was parsed successfully, otherwise -1.
- */
+*/
 int parse_line(char *line, unsigned int line_number, stack_t **stack)
 {
 	char *opcode;
@@ -25,6 +25,10 @@ int parse_line(char *line, unsigned int line_number, stack_t **stack)
 	else if (strcmp(opcode, "pall") == 0)
 	{
 		pall(stack, line_number);
+	}
+	if (strcmp(opcode, "pint") == 0)
+	{
+		pint(stack, line_number);
 	}
 	else
 	{
