@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  * execute_opcode - Executes the opcode using the appropriate function.
  * @opcode: The opcode as a string.
@@ -17,6 +16,7 @@ void execute_opcode(char *opcode, stack_t **stack, unsigned int line_number)
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 	int i = 0;
