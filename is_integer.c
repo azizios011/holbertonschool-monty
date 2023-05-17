@@ -1,4 +1,5 @@
 #include "monty.h"
+
 /**
  * is_integer - checks if a string is a valid integer
  * @str: the string to check
@@ -12,7 +13,7 @@ int is_integer(char *str)
 	if (str == NULL || *str == '\0')
 		return (0);
 
-	if (*str == '-')
+	if (str[i] == '-')
 		i++;
 
 	for (; str[i] != '\0'; i++)
