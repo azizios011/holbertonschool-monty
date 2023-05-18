@@ -13,8 +13,12 @@ int is_integer(char *str)
 	if (str == NULL || *str == '\0')
 		return (0);
 
-	if (str[i] == '-')
+	if (*str == '-')
+	{
+		if (*(str + 1) == '\0')
+			return 0;
 		i++;
+	}
 
 	for (; str[i] != '\0'; i++)
 	{
